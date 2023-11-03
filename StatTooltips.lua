@@ -89,6 +89,41 @@ local statTooltipsClass = {
     end
 };
 
+-- Change to blizzard armor tooltip
+function PaperDollFrame_SetArmor(unit, prefix)
+    if (not unit) then
+        unit = "player";
+    end
+    if (not prefix) then
+        prefix = "Character";
+    end
+
+    local base, effectiveArmor, armor, posBuff, negBuff = UnitArmor(unit);
+
+    if (unit ~= "player") then
+        --[[ In 1.12.0, UnitArmor didn't report positive / negative buffs for units that weren't the active player.
+			 This hack replicates that behavior for the UI. ]]
+        base = effectiveArmor;
+        armor = effectiveArmor;
+        posBuff = 0;
+        negBuff = 0;
+    end
+
+    local totalBufs = posBuff + negBuff;
+
+    local frame = _G[prefix .. "ArmorFrame"];
+    local text = _G[prefix .. "ArmorFrameStatText"];
+
+    PaperDollFormatStat(ARMOR, base, posBuff, negBuff, frame, text);
+    local playerLevel = UnitLevel(unit);
+    local armorReduction = effectiveArmor / ((85 * playerLevel) + 400);
+    armorReduction = 100 * (armorReduction / (armorReduction + 1));
+
+    frame.tooltip2 = format(ARMOR_TOOLTIP, playerLevel, armorReduction);
+    frame.tooltip2 = frame.tooltip2 .. "\nTo decrease damage taken by 1% multiplicative you need " ..
+                         (85 * UnitLevel("player") + 400) / 100 .. " armor."
+end
+
 statTooltipsDefault();
 local temp, class = UnitClass("player");
 statTooltipsClass[strlower(class)]();
