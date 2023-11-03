@@ -4,53 +4,62 @@ end
 
 statTooltipsFunction = {
     druid = function()
-        setClassStatText("DRUID", "INTELLECT",
+        local class = "DRUID";
+        setClassStatText(class, "INTELLECT",
             "Increases mana points and chance to score a critical hit with spells.\nIncreases the rate at which weapon skills improve.");
     end,
 
     hunter = function()
-        setClassStatText("HUNTER", "AGILITY",
+        local class = "HUNTER";
+        setClassStatText(class, "AGILITY",
             "Increases melee attack power by 1 and ranged attack power by 2, and improves the chance to score a critical hit with all weapons.\nIncreases armor and chance to dodge attacks.");
-        setClassStatText("HUNTER", "INTELLECT",
+        setClassStatText(class, "INTELLECT",
             "Increases mana points and chance to score a critical hit with spells.\nIncreases the rate at which weapon skills improve.")
     end,
 
     mage = function()
-        setClassStatText("MAGE", "INTELLECT",
+        local class = "MAGE";
+        setClassStatText(class, "INTELLECT",
             "Increases mana points and chance to score a critical hit with spells.\nIncreases the rate at which weapon skills improve.");
     end,
 
     paladin = function()
-        setClassStatText("PALADIN", "STRENGTH",
+        local class = "PALADIN";
+        setClassStatText(class, "STRENGTH",
             "Increases melee attack power by 2.\nIncreases the amount of damage that can be blocked with a shield.");
-        setClassStatText("PALADIN", "INTELLECT",
+        setClassStatText(class, "INTELLECT",
             "Increases mana points and chance to score a critical hit with spells.\nIncreases the rate at which weapon skills improve.")
     end,
 
     priest = function()
-        setClassStatText("PRIEST", "INTELLECT",
+        local class = "PRIEST";
+        setClassStatText(class, "INTELLECT",
             "Increases mana points and chance to score a critical hit with spells.\nIncreases the rate at which weapon skills improve.")
     end,
 
     rogue = function()
-        setClassStatText("ROGUE", "AGILITY",
+        local class = "ROGUE";
+        setClassStatText(class, "AGILITY",
             "Increases melee attack power by 1 and ranged attack power by 2, and improves the chance to score a critical hit with all weapons.\nIncreases armor and chance to dodge attacks.");
     end,
 
     shaman = function()
-        setClassStatText("SHAMAN", "STRENGTH",
+        local class = "SHAMAN";
+        setClassStatText(class, "STRENGTH",
             "Increases melee attack power by 2.\nIncreases the amount of damage that can be blocked with a shield.");
-        setClassStatText("SHAMAN", "Intellect",
+        setClassStatText(class, "Intellect",
             "Increases mana points and chance to score a critical hit with spells.\nIncreases the rate at which weapon skills improve.");
     end,
 
     warlock = function()
-        setClassStatText("WARLOCK", "INTELLECT",
+        local class = "WARLOCK";
+        setClassStatText(class, "INTELLECT",
             "Increases mana points and chance to score a critical hit with spells.\nIncreases the rate at which weapon skills improve.");
     end,
 
     warrior = function()
-        setClassStatText("WARRIOR", "STRENGTH",
+        local class = "WARRIOR";
+        setClassStatText(class, "STRENGTH",
             "Increases melee attack power by 2.\nIncreases the amount of damage that can be blocked with a shield.");
     end
 };
