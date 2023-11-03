@@ -1,3 +1,6 @@
+ARMOR_TOOLTIP = "Decreases physical damage taken from a level %d attacker by %.1f%%."
+MELEE_ATTACK_POWER_TOOLTIP = "Increases melee DPS by %.1f.\nEvery 14 attack power increases DPS by 1."
+
 local strMainStatTooltip =
     "Increases melee attack power by 2.\nIncreases damage blocked with a shield by 1 per 20 Strength.";
 local agiMainStatTooltip =
