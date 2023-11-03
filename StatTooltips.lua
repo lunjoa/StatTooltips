@@ -67,6 +67,8 @@ local statTooltipsClass = {
     warrior = function()
         local class = "WARRIOR";
         setClassStatText(class, "STRENGTH", strMainStatTooltip);
+        setClassStatText(class, "AGILITY",
+            "Increases ranged attack power by 2.\nIncreases crit chance.\nIncreases armor by 2.\nIncreases dodge chance.");
         setClassStatText(class, "SPIRIT", nonManaSpiritTooltip);
     end
 };
