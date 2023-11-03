@@ -17,8 +17,8 @@ local statTooltipsDefault = function()
     _G["DEFAULT" .. "_" .. "AGILITY" .. "_" .. "TOOLTIP"] =
         "Increases crit chance.\nIncreases armor by 2.\nIncreases dodge chance.";
     _G["DEFAULT" .. "_" .. "STAMINA" .. "_" .. "TOOLTIP"] = "Increases health by 10.";
-    _G["DEFAULT" .. "_" .. "INTELLECT" .. "_" .. "TOOLTIP"] = "Increases the rate at which weapon skills improve";
-    _G["DEFAULT" .. "_" .. "SPIRIT" .. "_" .. "TOOLTIP"] = "Increases health and mana regeneration rates";
+    _G["DEFAULT" .. "_" .. "INTELLECT" .. "_" .. "TOOLTIP"] = "Increases the rate at which weapon skills improve.";
+    _G["DEFAULT" .. "_" .. "SPIRIT" .. "_" .. "TOOLTIP"] = "Increases health and mana regeneration rates.";
 end
 
 local statTooltipsClass = {
