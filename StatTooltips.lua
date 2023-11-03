@@ -1,5 +1,5 @@
 local strMainStatTooltip =
-    "Increases melee attack power by 2.\nIncreases the amount of damage that can be blocked with a shield.";
+    "Increases melee attack power by 2.\nIncreases damage blocked with a shield by 1 per 20 Strength.";
 local agiMainStatTooltip =
     "Increases melee attack power by 1\nIncreases ranged attack power by 2.\nIncreases crit chance.\nIncreases armor by 2.\nIncreases dodge chance.";
 local intMainStatTooltip =
