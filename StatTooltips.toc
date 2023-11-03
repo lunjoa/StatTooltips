@@ -1,0 +1,6 @@
+## Interface: 11404
+## Author: Joakim Lundström
+## Version: 0.0.1
+## Title: StatTooltips
+## Notes: Advanced Character Stats Tooltips
+## DefaultState:  enabled
