@@ -4,3 +4,5 @@
 ## Title: StatTooltips
 ## Notes: Advanced Character Stats Tooltips
 ## DefaultState:  enabled
+
+StatTooltips.lua
