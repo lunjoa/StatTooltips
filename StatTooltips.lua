@@ -2,21 +2,21 @@ ARMOR_TOOLTIP = "Decreases physical damage taken from a level %d attacker by %.1
 MELEE_ATTACK_POWER_TOOLTIP = "Increases melee DPS by %.1f.\nEvery 14 attack power increases DPS by 1."
 
 local strMainStatTooltip =
-    "Increases melee attack power by 2.\nIncreases damage blocked with a shield by 1 per 20 Strength.";
+    "Increases melee attack power by 2 per point.\nIncreases damage blocked with a shield by 1 per 20 points.";
 local agiMainStatTooltip =
-    "Increases melee attack power by 1\nIncreases ranged attack power by 2.\nIncreases crit chance.\nIncreases armor by 2.\nIncreases dodge chance.";
+    "Increases melee attack power by 1 per point\nIncreases ranged attack power by 2 per point.\nIncreases crit chance.\nIncreases armor by 2 per point.\nIncreases dodge chance.";
 local intMainStatTooltip =
-    "Increases mana by 15.\nIncreases spell crit chance.\nIncreases the rate at which weapon skills improve.";
+    "Increases mana by 15 per point.\nIncreases spell crit chance.\nIncreases the rate at which weapon skills improve.";
 
 local setClassStatText = function(class, stat, text)
     _G[class .. "_" .. stat .. "_" .. "TOOLTIP"] = text;
 end
 
 local statTooltipsDefault = function()
-    _G["DEFAULT" .. "_" .. "STRENGTH" .. "_" .. "TOOLTIP"] = "Increases melee attack power by 1.";
+    _G["DEFAULT" .. "_" .. "STRENGTH" .. "_" .. "TOOLTIP"] = "Increases melee attack power by 1 per point.";
     _G["DEFAULT" .. "_" .. "AGILITY" .. "_" .. "TOOLTIP"] =
-        "Increases crit chance.\nIncreases armor by 2.\nIncreases dodge chance.";
-    _G["DEFAULT" .. "_" .. "STAMINA" .. "_" .. "TOOLTIP"] = "Increases health by 10.";
+        "Increases crit chance.\nIncreases armor by 2 per point.\nIncreases dodge chance.";
+    _G["DEFAULT" .. "_" .. "STAMINA" .. "_" .. "TOOLTIP"] = "Increases health by 10 per point.";
     _G["DEFAULT" .. "_" .. "INTELLECT" .. "_" .. "TOOLTIP"] = "Increases the rate at which weapon skills improve.";
     _G["DEFAULT" .. "_" .. "SPIRIT" .. "_" .. "TOOLTIP"] = "Increases health and mana regeneration rates.";
 end
@@ -84,7 +84,7 @@ local statTooltipsClass = {
         local class = "WARRIOR";
         setClassStatText(class, "STRENGTH", strMainStatTooltip);
         setClassStatText(class, "AGILITY",
-            "Increases ranged attack power by 2.\nIncreases crit chance.\nIncreases armor by 2.\nIncreases dodge chance.");
+            "Increases ranged attack power by 2 per point.\nIncreases crit chance.\nIncreases armor by 2 per point.\nIncreases dodge chance.");
         setClassStatText(class, "SPIRIT", "Increases health regeneration by 80% of Spirit per 2 sec when not in combat.")
     end
 };
